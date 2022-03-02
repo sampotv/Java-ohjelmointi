@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lisää koe</title>
+</head>
+<body>
+<h1>Lisää kurssi</h1>
+<form method="POST" action="http://localhost:8080/addcourse">
+    <label>Kurssin nimi:</label><br>
+    <input type="text" name="course"><br>
+    <label >Kurssin opettaja:</label><br>
+    <input type="text" name="teacher"><br><br>
+    <input type="submit" value="Lähetä">
+</form>
+<br>
+<form action="/index.html">
+    <input type="submit" value="Palaa pääsivulle">
+</form>
+</body>
+</html>

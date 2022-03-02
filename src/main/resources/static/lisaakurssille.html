@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lisää opiskelija kurssille</title>
+</head>
+<body>
+<h1>Lisää opiskelija kurssille</h1>
+<h4>Lisää olemassa olevia opiskelijoita olemassa oleville kursseille ID tunnuksilla.</h4>
+<form method="POST" action="http://localhost:8080/filer">
+    <label>Opiskelijan ID:</label><br>
+    <input type="text" name="studentid"><br>
+    <label >Kurssin ID:</label><br>
+    <input type="text" name="courseid"><br><br>
+    <input type="submit" value="Lähetä">
+</form>
+
+<br>
+<form action="/index.html">
+    <input type="submit" value="Palaa pääsivulle">
+</form>
+</body>
+</html>
