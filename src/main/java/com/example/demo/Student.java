@@ -25,13 +25,10 @@ public Student(){       // hard koodataan yksi oppilas valmiiksi listalle
         students.add(new Student(1, "Malli", "Oppilas"));
 }
     public String setStudent(String fname, String lname) {
-        //uuden opiskelijan lisäys, id kasvaa automaattisesti
-        //studentid=studentid+1;
         Student s = new Student(studentid, fname, lname);
         students.add(s);
-        return "Oppilas lisätty!" + back;     //opiskelija lisätty, haetaan Info luokasta back muuttujalla buttoni jolla palataan index.html etusivulle
+        return "Opiskelija lisätty!" + back;     //opiskelija lisätty, haetaan Info luokasta back muuttujalla buttoni jolla palataan index.html etusivulle
     }
-
     public String getFname() {
         return fname;
     }
@@ -45,18 +42,15 @@ public Student(){       // hard koodataan yksi oppilas valmiiksi listalle
     }
     public String getStudents(){                //haetaan opiskelijat ja tulostetaan tiedot
         StringBuilder valueString=new StringBuilder();
-        if(students.isEmpty()){
-            return "Ei yhtään opiskelijaa! Lisää ensin opiskelijoita.";
-        }
         for (Student s : students) {
             valueString.append("<br><br>Oppilas ID: ").append(s.getStudentid());
             valueString.append("<br>Etunimi: ").append(s.getFname());
             valueString.append("<br>Sukunimi: ").append(s.getLname());
         }return ""+ valueString;
     }
-    public String  getStudentId(String studentid){      //haetaan oppilaan tiedot ID tunnuksella
-            int id = Integer.parseInt(studentid);
-            Student s = students.get(id - 1);
+    public String getStudentId(String studentid){      //haetaan oppilaan tiedot ID tunnuksella
+            int getid = Integer.parseInt(studentid);
+            Student s = students.get(getid-1);
             return "<br><br>Oppilaan nimi: " + s.getFname() + " " + s.getLname();
         }
     }

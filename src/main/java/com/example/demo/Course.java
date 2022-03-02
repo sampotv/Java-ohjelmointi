@@ -37,27 +37,21 @@ public class Course extends Info{           //Luodaan course luokka joka perii i
     }
 
     public String setCourse(String course, String teacher){ //uuden kurssin lisäys, id kasvaa automaattisesti
-        courseid = courseid+1;
         Course c = new Course(courseid, course, teacher);
         courses.add(c);
         return "Kurssi lisätty!" +back;   //kurssi lisätty, haetaan Info luokasta back muuttujalla buttoni jolla palataan index.html etusivulle
     }
     public String getCourses(){         //haetaan kurssit ja tulostetaan tiedot
         StringBuilder valueString= new StringBuilder();
-        if(courses.isEmpty()){              //mikäli kurssilista olisi tyhjä tulostetaan viesti
-            return "Ei yhtään kurssia! Lisää kursseja.";
-        }
-        else{
         for (Course c : courses) {
             valueString.append("<br><br>Kurssin ID: ").append(c.getCourseid());
             valueString.append("<br>Kurssin nimi: ").append(c.getCourse());
             valueString.append("<br>Kurssin opettaja: ").append(c.getTeacher());
-        }
         }return ""+ valueString;
     }
     public String  getCourseId(String courseid){        //haetaan kurssin tiedot ID tunnuksella
-        int id = Integer.parseInt(courseid);
-        Course s = courses.get(id - 1);
+        int getid = Integer.parseInt(courseid);
+        Course s = courses.get(getid-1);
         return "<br>Kurssin nimi: " + s.getCourse() + "<br>Opettajan nimi: " + s.getTeacher();
     }
 }

@@ -41,30 +41,17 @@ public class MyRestController extends Info{
         return s.getStudents() + back;
     }
 
-    @PostMapping("filer")           //tällä lisätään olemassa oleva oppilas olemassa olevalle kurssille
+    @PostMapping("enroll")           //tällä lisätään olemassa oleva oppilas olemassa olevalle kurssille
 
-    public String filer(@RequestParam String courseid, @RequestParam String  studentid) throws IOException{
+    public String enroll(@RequestParam String courseid, @RequestParam String  studentid) throws IOException{
 
         String enrollStudent = s.getStudentId(studentid);
         String enrollCourse = c.getCourseId(courseid);
         return f.enroll(enrollStudent, enrollCourse);
     }
 
-    @GetMapping("getfiler")         //tällä saadaan haettua tiedostoon talletetut kursseille lisätyt oppilaat
-    public String getfiler(){
+    @GetMapping("getenroll")         //tällä saadaan haettua tiedostoon talletetut kursseille lisätyt oppilaat
+    public String getenroll(){
         return f.GetEnrolled();
     }
-
-
-    /*@PostMapping("enrolls")  //vaihtoehtonen lisäys, mutta ei oikeen toimi, unohdetaan tähän hätään
-    public String enrolls(@RequestParam String studentid, @RequestParam String  courseid) {
-        try {
-            int sEnroll = Integer.parseInt(studentid);
-            int cEnroll = Integer.parseInt(courseid);
-            //Enroll e = new Enroll(students.get(sEnroll - 1), courses.get(cEnroll - 1));
-            //enrolls.add(e);
-        } catch (Exception e) {
-            return "Oppilaan ID ja kurssin ID eivät täsmää!" + back;
-        } return "Oppilas lisätty kurssille!" +back;
-    }*/
 }

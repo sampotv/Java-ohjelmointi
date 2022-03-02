@@ -9,12 +9,12 @@ import java.util.Scanner;
 public class FileWriter extends Info{
     File filer = new File("EnrolledStudents.txt");  //kerrotaan mihin tiedostoon tallennetaan tiedot
 
-    public String enroll(String enrollStudent, String enrollCourse) throws IOException{     //talletetaan tiedot
+    public String enroll(String enrollStudent, String enrollCourse) throws IOException{     //tallennetaan tiedot tiedostoon
         java.io.FileWriter WriteToFile = new java.io.FileWriter("EnrolledStudents.txt", true);
         WriteToFile.append(enrollStudent);
         WriteToFile.append(enrollCourse);
         WriteToFile.close();
-        return "Oppilas lisätty kurssille!" + back; //opiskelija lisätty kurssille, haetaan Info luokasta back muuttujalla buttoni jolla palataan index.html etusivulle
+        return "Opiskelija lisätty kurssille!" + back; //opiskelija lisätty kurssille, haetaan Info luokasta back muuttujalla buttoni jolla palataan index.html etusivulle
 
     }
     public String GetEnrolled(){            //haetaan oppilaat kursseilla
@@ -31,7 +31,6 @@ public class FileWriter extends Info{
                 myFiler.close();
             }
         }catch (Exception e) {
-            e.printStackTrace();
             return "Tippuiko tiedostoni katiskaan, nyt on kaikki hukassa" + back;
         }
         return data + back;
