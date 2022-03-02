@@ -9,7 +9,7 @@ public class Course extends Info{           //Luodaan course luokka joka perii i
     private int courseid;                 //luodaan muuttujat
     private String course;
     private String teacher;
-    private static int oldid=1;
+    private static int oldid=1;             //1 kurssi hard koodataan, aloitetaan ID kasvattaminen 1+1 arvosta
 
     private final List<Course> courses = new ArrayList<>();
 

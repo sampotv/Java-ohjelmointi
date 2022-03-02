@@ -17,7 +17,7 @@ public class MyRestController extends Info{
 
     Course c = new Course();
     Student s = new Student();
-    FilerService e = new FilerService();
+    FileWriter f = new FileWriter();
 
 
 
@@ -47,12 +47,12 @@ public class MyRestController extends Info{
 
         String enrollStudent = s.getStudentId(studentid);
         String enrollCourse = c.getCourseId(courseid);
-        return e.enroll(enrollStudent, enrollCourse);
+        return f.enroll(enrollStudent, enrollCourse);
     }
 
     @GetMapping("getfiler")         //tällä saadaan haettua tiedostoon talletetut kursseille lisätyt oppilaat
     public String getfiler(){
-        return e.GetEnrolled();
+        return f.GetEnrolled();
     }
 
 

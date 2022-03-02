@@ -9,7 +9,7 @@ public class Student extends Info{          //Luodaan student luokka joka perii 
     private String fname;                   //luodaan muuttujat
     private String lname;
     private int studentid;
-    private static int oldid =1;
+    private static int oldid =1;            //1 oppilas hard koodataan, aloitetaan ID kasvattaminen 1+1 arvosta
     private final List<Student> students = new ArrayList<>();
 
 

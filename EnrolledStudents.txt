@@ -1,1 +1,1 @@
-<br>Oppilaan nimi: Malli Oppilas<br>Kurssin nimi: Java-ohjelmointi<br>Opettajan nimi: Reima Riihimäki
+<br><br>Oppilaan nimi: Malli Oppilas<br>Kurssin nimi: Java-ohjelmointi<br>Opettajan nimi: Reima Riihimäki
