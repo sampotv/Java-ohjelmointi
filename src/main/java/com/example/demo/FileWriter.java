@@ -23,7 +23,7 @@ public class FileWriter extends Info{
             if(txt.length()==0){          //mikäli ei yhtään oppilaita ilmoitettuna kursseille tulostetaan viesti
                 return "Ei yhtään oppilaita ilmoitettuna kursseille!" +back;
             }else {
-                                            //lisätään oppilas kurssille, mikäli .txt tiedostoa ei ole, se luodaan tässä
+                                            //näytetään oppilaat kursseilla, mikäli .txt tiedostoa ei ole, se luodaan tässä
                 Scanner myFiler = new Scanner(txt);
                 while (myFiler.hasNextLine()) {
                     data.append(myFiler.nextLine());
