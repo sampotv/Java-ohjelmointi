@@ -24,11 +24,11 @@ public class FileWriter extends Info{
                 return "Ei yhtään oppilaita ilmoitettuna kursseille!" +back;
             }else {
                                             //näytetään oppilaat kursseilla, mikäli .txt tiedostoa ei ole, se luodaan tässä
-                Scanner myFiler = new Scanner(txt);
-                while (myFiler.hasNextLine()) {
-                    data.append(myFiler.nextLine());
+                Scanner filu = new Scanner(txt);
+                while (filu.hasNextLine()) {
+                    data.append(filu.nextLine());
                 }
-                myFiler.close();
+                filu.close();
             }
         }catch (Exception e) {
             return "Tippuiko tiedostoni katiskaan, nyt on kaikki hukassa" + back;
